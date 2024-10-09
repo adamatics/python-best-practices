@@ -1,0 +1,43 @@
+name: CD
+
+on:
+  push:
+    branches:
+      - main  # Trigger CD on pushes to the main branch
+  workflow_dispatch:  # Allow manual triggering of the workflow
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+
+    - name: Log in to DockerHub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+    - name: Extract metadata (tags) for Docker
+      id: meta
+      uses: docker/metadata-action@v4
+      with:
+        images: victorvalera/workshop_test
+
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v4
+      with:
+        context: .
+        push: true
+        tags: ${{ steps.meta.outputs.tags }}
+        labels: ${{ steps.meta.outputs.labels }}
+
+    - name: Deploy to Server (Optional)
+      run: |
+        # Commands to deploy your Docker image to your server or cloud provider
+        # For example, SSH into your server and pull the new image
