@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "lundpy"
+version = "0.1.0"
+description = "A sample project for the Python Development Best Practices Workshop by Adamatics."
+authors = ["Victor Valera <victor@adamatics.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Flask = "^3.0.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+ruff = "^0.6.9"
+poethepoet = "^0.29.0"
+
+[tool.poe.tasks]
+
+  [tool.poe.tasks.run]
+  cmd = "flask run"
+  help = "Run application"
+  env = { FLASK_APP = "lundpy/app.py", FLASK_ENV = "development" }
+
+  [tool.poe.tasks.test]
+  cmd = "pytest"
+  help = "Test this package"
+
+  [tool.poe.tasks.lint]
+  cmd = "ruff check ."
+  help = "Lint this package"
+  
+  [tool.poe.tasks.format]
+  cmd = "ruff check . --fix"
+  help = "Format this package"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
