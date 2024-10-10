@@ -1,4 +1,7 @@
 # python-best-practices
+
 Example Python project used for the Python Best Development Practices Workshop 
 
-Sune was here
+## Contributers to the project
+ - Sune: @askjaer
+ 
