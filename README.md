@@ -9,3 +9,9 @@ Example Python project used for the Python Best Development Practices Workshop
 
 # Installation
 Please fill in the rest
+
+## here comes the code
+```python
+print("Hello World")
+```
+
