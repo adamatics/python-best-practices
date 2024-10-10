@@ -6,4 +6,4 @@ Change 1.
 CHange 2.
 
 ## Location
-This workshop was held in Valby
+This workshop was held in Valby, Copenhagen area, Denmark :)
