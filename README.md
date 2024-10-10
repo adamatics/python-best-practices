@@ -6,3 +6,6 @@ Example Python project used for the Python Best Development Practices Workshop
 #### used 20241010
 
 #### and then again a few minutes later
+
+# Installation
+Please fill in the rest
