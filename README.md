@@ -13,3 +13,4 @@ Example Python project used for the Python Best Development Practices Workshop
 3. Run the tests
 4. Run the code
 5. Have fun
+6. Profit
