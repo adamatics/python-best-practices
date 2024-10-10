@@ -8,3 +8,5 @@ This is the second update to the README file: Repo was used for a workshop at Lu
 First change
 
 Second change
+
+STSS: This should fix Issue 5
