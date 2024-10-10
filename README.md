@@ -8,4 +8,8 @@ Example Python project used for the Python Best Development Practices Workshop
 #### and then again a few minutes later
 
 # Installation
-Please fill in the rest
+1. Clone the repository
+2. Install the requirements
+3. Run the tests
+4. Run the code
+5. Have fun
