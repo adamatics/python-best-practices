@@ -11,3 +11,7 @@ This is a collaboration library for solving time travel.
  - Salva
  - Steen
 
+# Warnings
+
+Time travel can create time paradoxes such as the grandfather paradox and the bootstrap paradox.
+Proceed with care.
