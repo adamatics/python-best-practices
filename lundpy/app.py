@@ -4,15 +4,16 @@ import random
 app = Flask(__name__)
 
 quotes = [
-    "Code is like humor. When you have to explain it, it’s bad.",
-    "Fix the cause, not the symptom.",
-    "Optimism is an occupational hazard of programming.",
-    "Welcome to the Python Best Practices Workshop!"
+    {"text": "Code is like humor. When you have to explain it, it’s bad.", "author": "Cory House"},
+    {"text": "Fix the cause, not the symptom.", "author": "Steve Maguire"},
+    {"text": "Optimism is an occupational hazard of programming.", "author": "Kent Beck"},
+    {"text": "Simplicity is the soul of efficiency.", "author": "Austin Freeman"}
 ]
 
 @app.route('/')
 def hello():
-    return random.choice(quotes)
+    quote = random.choice(quotes)
+    return f"{quote['text']} - {quote['author']}"
 
 if __name__ == '__main__':
     app.run(debug=True)
