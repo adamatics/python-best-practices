@@ -7,6 +7,7 @@ quotes = [
     "Code is like humor. When you have to explain it, it’s bad.",
     "Fix the cause, not the symptom.",
     "Optimism is an occupational hazard of programming."
+    "Hello, World from Flask! - KRLB was here !!"
 ]
 
 @app.route('/')
