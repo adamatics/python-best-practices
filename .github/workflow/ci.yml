@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:           # Triggers on push to any branch
+    branches:
+      - '**'      # '**' indicates all branches
+  pull_request:   # Triggers on pull requests targeting the 'main' branch
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    - name: Install Poetry
+      run: |
+        curl -sSL https://install.python-poetry.org | python3 -
+        export PATH="$HOME/.local/bin:$PATH"
+        poetry install
+    - name: Run linters
+      run: poetry run poe lint
+    - name: Run tests
+      run: poetry run poe test
