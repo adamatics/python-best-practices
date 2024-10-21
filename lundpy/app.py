@@ -6,7 +6,8 @@ app = Flask(__name__)
 quotes = [
     "Code is like humor. When you have to explain it, it’s bad.",
     "Fix the cause, not the symptom.",
-    "Optimism is an occupational hazard of programming."
+    "Optimism is an occupational hazard of programming.",
+    "Welcome to the Python Best Practices Workshop!"
 ]
 
 @app.route('/')
