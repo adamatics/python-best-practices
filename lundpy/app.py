@@ -17,6 +17,7 @@ quotes = [
 
 @app.route('/')
 def hello():
+    # New commit for rebase
     quote = random.choice(quotes)
     logger.info(f"Quote displayed: {quote}")  # Added logging
     return f"{quote['text']} - {quote['author']}"
