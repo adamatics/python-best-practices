@@ -12,7 +12,8 @@ quotes = [
 
 @app.route('/')
 def hello():
-    return random.choice(quotes)
+    quote = random.choice(quotes)
+    return f"{quote['text']} - {quote['author']}"
 
 if __name__ == '__main__':
     app.run(debug=True)
